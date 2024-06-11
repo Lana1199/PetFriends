@@ -70,7 +70,7 @@ class PetFriends():
         result = ""
         try:
             result = res.json()
-        except:
+        except json.decoder.JSONDecodeError:
             result = res.text
 
         return status, result
